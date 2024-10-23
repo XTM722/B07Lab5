@@ -12,4 +12,4 @@
 
 ## Checklist
 - [ ] I have tested my code and it works
-- [ ] I have reviewed my code and removed any unnecessary parts (e.g., debug code)
+- [ ] I have reviewed my code and removed any unnecessary parts (e.g., debug code)git pull origin main --rebase
