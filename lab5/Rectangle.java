@@ -3,47 +3,25 @@ package lab5;
 import javax.xml.namespace.QName;
 
 public class Rectangle {
-    private double length;
-    private double width;
+	Point A;
+	Point B;
+	Point C;
+	Point D;
+	
+	public Rectangle(Point A, Point B, Point C, Point D) {
+		this.A = A;
+		this.B = B;
+		this.C = C;
+		this.D = D;
+	}
+	
 
-    public Rectangle(double length, double width){
-        setLength(length);
-        setWidth(width);
-    }
+	public double area() {
+		return A.distance(B)*A.distance(C);
+	}
 
-    public void setLength(double length){
-        if (length <= 0){
-            throw new IllegalArgumentException("You crazy person! Length must be positive!");
-        }
-        else{
-            this.length = length;
-        }
-    }
-
-    public void setWidth(double width){
-        if (width <= 0){
-            throw new IllegalArgumentException("You nutjob! Width must be positive!");
-        }
-        else{
-            this.width = width;
-        }
-    }
-
-    public double calculateArea(){
-        return length * width;
-    }
-
-    public double calculatePerimeter(){
-        return (length * 2) + (width * 2);
-    }
-
-    public double getLength(){
-        return length;
-    }
-
-    public double getWidth(){
-        return width;
-    }
-
+	public double perimeter() {
+		return 2* (A.distance(B) + A.distance(C));
+	}
 
 }
