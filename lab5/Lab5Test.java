@@ -1,4 +1,4 @@
-package com.example.setup_junit_eclipse_02;
+package lab5;
 
 import static org.junit.jupiter.api.Assertions.*;
 
