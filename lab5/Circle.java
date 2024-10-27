@@ -1,4 +1,4 @@
-package Lab5;
+package lab5;
 
 public class Circle {
 	Point A;
@@ -10,7 +10,7 @@ public class Circle {
 		public double perimeter() {
 		return Math.PI *(2*radius);
 		}
-		public double areaOfcicle() {
+		public double areaOfcircle() {
 			return Math.PI *(radius*radius);
 			}
 		public boolean isEqualperimeter(Circle c1) {
