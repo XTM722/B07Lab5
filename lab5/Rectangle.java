@@ -22,7 +22,7 @@ public class Rectangle {
         double CD = C.distance(D);
         double DA = D.distance(A);
 
-         return AB == CD && BC == DA;
+        return AB == CD && BC == DA;
     }
 
     public double area() {
