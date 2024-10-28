@@ -1,49 +1,36 @@
 package lab5;
 
-import javax.xml.namespace.QName;
-
 public class Rectangle {
-    private double length;
-    private double width;
+    Point A;
+    Point B;
+    Point C;
+    Point D;
 
-    public Rectangle(double length, double width){
-        setLength(length);
-        setWidth(width);
-    }
-
-    public void setLength(double length){
-        if (length <= 0){
-            throw new IllegalArgumentException("You crazy person! Length must be positive!");
+    public Rectangle(Point A, Point B, Point C, Point D) {
+        if (!isValidRectangle(A, B, C, D)) {
+            throw new IllegalArgumentException("Go back to grade school. Not a valid rectangle!");
         }
-        else{
-            this.length = length;
-        }
+        this.A = A;
+        this.B = B;
+        this.C = C;
+        this.D = D;
     }
 
-    public void setWidth(double width){
-        if (width <= 0){
-            throw new IllegalArgumentException("You nutjob! Width must be positive!");
-        }
-        else{
-            this.width = width;
-        }
+    private boolean isValidRectangle(Point A, Point B, Point C, Point D) {
+        double AB = A.distance(B);
+        double BC = B.distance(C);
+        double CD = C.distance(D);
+        double DA = D.distance(A);
+
+        // Check whether length and width the same measurement !
+        return AB == CD && BC == DA;
     }
 
-    public double calculateArea(){
-        return length * width;
+    public double area() {
+        return A.distance(B) * A.distance(C);
     }
 
-    public double calculatePerimeter(){
-        return (length * 2) + (width * 2);
+    public double perimeter() {
+        return 2 * (A.distance(B) + A.distance(C));
     }
-
-    public double getLength(){
-        return length;
-    }
-
-    public double getWidth(){
-        return width;
-    }
-
-
 }
