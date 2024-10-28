@@ -22,8 +22,7 @@ public class Rectangle {
         double CD = C.distance(D);
         double DA = D.distance(A);
 
-        // Check whether length and width the same measurement !
-        return AB == CD && BC == DA;
+         return AB == CD && BC == DA;
     }
 
     public double area() {
